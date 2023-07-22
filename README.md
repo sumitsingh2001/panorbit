@@ -1,5 +1,5 @@
 This is the only Desktop mode of panorbit's work, The layout is made only for 1440 screen size
-like a normal window size can see the logics and all,
+like a normal window size, You can see the logics and all,
 
 if something is messing up just make your screen size a little bit smaller, zoom in or zoom out for better view aspect
 
