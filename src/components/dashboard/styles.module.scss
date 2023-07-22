@@ -305,6 +305,10 @@
     &.active{
       height: 300px;
       transition: 0.3s;
+
+      .chatContainer .head .rf{
+        transform: rotate(0deg);
+      }
     }
     .chatContainer{
         height: 100%;
