@@ -1,0 +1,340 @@
+.dashboard{
+  height: 90vh;
+  overflow: hidden;
+  user-select: none;
+
+  padding: 24px;
+  display: flex;
+  gap: 25px;
+
+  .sidebar{
+    width: 350px;
+    height: 100%;
+    background-color: #464ec8;
+    overflow: hidden;
+    border-radius: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .tabs{
+      width: 100%;
+      
+      .items{
+        position: relative;
+        cursor: pointer;
+        padding: 0 48px;
+          padding-bottom: 12px;
+          font-size: 20px;
+          font-weight: 500;
+          text-align: left;
+          margin-bottom: 14px;
+          letter-spacing: 1.2px;
+
+        .link{
+          border-bottom: 1px solid #a4a3e4;
+          width: 100%;
+          padding-bottom: 12px;
+          color: #a4a3e4;
+          transition: 0.3s;
+
+          &.active{
+            border-bottom: 1px solid #fff;
+            color: #fff;
+          }
+        }
+
+        &.active{
+           &::before{
+             display: block;
+           }
+        }
+
+        &::before{
+          content: url(../../assets/images/sicon.png);
+          color: #ccc;
+          position: absolute;
+          line-height: 0;
+          right: 0px;
+          top: -11px;
+          display: none;
+        }
+
+      }
+    }
+  }
+
+  .right{
+    height: 100%;
+    width: 100%;
+
+    .content{
+      width: 100%;
+      margin-bottom: 52px;
+
+      .header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 24px 0;
+        border-bottom: 1px solid #ccc;
+
+        .title{
+          font-size: 24px;
+          font-family: Arial, Helvetica, sans-serif;
+          font-weight: 600;
+          text-transform: capitalize;
+          color: #706f6f
+        }
+        .signout{
+          .userIcon{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            img{
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              object-fit: contain;
+            }
+            .username{
+              margin-right: 25px;
+              font-size: 16px;
+              color: #646363;
+              font-weight: 500;
+
+            }
+          }
+          .popupcontent{
+            width: 250px;
+            border-radius: 18px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px #ccc;
+            position: absolute;
+            transform: translate(-40%, 8%);
+            text-align: center;
+            padding: 24px;
+
+            img{
+              width: 100px;
+              height: 100px;
+              object-fit: contain;
+              border-radius: 50%;
+              margin-bottom: 12px;
+            }
+            .name{
+              color: #000;
+              font-weight: 500;
+              margin-bottom: 4px;
+            }
+            .email{
+              font-size: 16px;
+              color: #939292;
+              margin-bottom: 16px;
+            }
+            .user{
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              gap: 10px;
+              border-top: 1px solid #ccc;
+              padding: 12px 0;
+
+              img{
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                margin-bottom: 0;
+              }
+              .username{
+                font-size: 14px;
+                color: #848181;
+                min-width: fit-content;
+              }
+            }
+            .sout{
+              margin-top: 18px;
+                .link{
+                color: #fff;
+                text-decoration: none;
+                padding: 12px 18px;
+                border-radius: 18px;
+                background-color: #d55151;
+                width: fit-content;
+                margin-inline: auto;
+              }
+            }
+          }
+        }
+      }
+    }
+    .mainContent{
+     .details{
+        display: flex;
+        gap: 25px;
+
+        .ctLeft{
+          flex: 0.5;
+          min-height: 100%;
+          border-right: 1px solid #ccc;
+
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          
+          img{
+            width: 250px;
+            height: 250px;
+            object-fit: contain;
+            border-radius: 100%;
+
+            margin-bottom: 16px;
+            margin-inline: auto;
+          }
+          .personName{
+            font-size: 18px;
+            font-variant: small-caps;
+            width: 200px;
+            max-width: 200px;
+            min-width: fit-content;
+            margin-inline: auto;
+            font-weight: 600;
+            margin-bottom: 14px;
+          }
+          .userInfo{
+            font-size: 16px;
+            color: #898888;
+            font-weight: bolder;
+            margin-bottom: 10px;
+            width:90%;
+
+            span{
+              color: #4b4a4a;
+              font-weight: 600;
+              text-transform: lowercase;
+              font-variant: normal;
+              font-size: 16px;
+            }
+
+            &:nth-child(6){
+              border-bottom: 1px solid #000;
+              padding-bottom: 16px;
+            }
+          }
+          .cmpName{
+            font-size: 18px;
+            font-variant: small-caps;
+            width: 200px;
+            max-width: 200px;
+            margin-inline: auto;
+            font-weight: 600;
+            margin-bottom: 14px;
+          }
+        }
+        .ctRight{
+          flex: 1;
+
+          dl{
+            font-size: 16px;
+            color: #898888;
+            font-weight: bold;
+            margin-bottom: 14px;
+            width: 100%;
+            li{
+              padding-left: 24px;
+              margin-bottom: 8px;
+
+              span{
+                color: #4b4a4a;
+                font-weight: 600;
+                text-transform: lowercase;
+                font-variant: normal;
+                font-size: 16px;
+              }
+            }
+          }
+          .map{
+            width: 100%;
+            background-color: #ccc;
+            height: 350px;
+            border-radius: 18px;
+            margin-top: 36px;
+            overflow: hidden;
+          }
+
+          .ltng{
+            text-align: right;
+            font-size: 14px;
+            color: #4b4a4a;
+            margin-top: 8px;
+          }
+        }
+      }
+    }
+    .commingsoon{
+      height: 100%;
+      .cm{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+        
+      height: 500px;
+      font-size: 86px;
+      font-weight: bold;
+      color: #e3e2e2;
+      text-transform: capitalize;
+
+     }
+    }
+  }
+  .chatbox{
+    position: absolute;
+    bottom: 0;
+    right: 5%;
+    border-radius: 8px 8px 0 0;
+    cursor: pointer;
+
+    width: 300px;
+    height: 50px;
+    overflow-y: scroll;
+    z-index: 1000;
+
+    &.active{
+      height: 300px;
+      transition: 0.3s;
+    }
+    .chatContainer{
+        height: 100%;
+        width: 100%;
+      .head{
+        padding: 15px 14px;
+        background-color: #0568d2;
+        position: sticky;
+        top: 0;
+        color: #fff;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .lf{
+          display:flex;
+          align-items: center;
+          gap: 10px;
+        }
+
+        .rf{
+          transform: rotate(180deg);
+          line-height: 0;
+        }
+      }
+      .userlist{
+        background-color: #fff;
+        height: 90%;
+      }
+    }
+  }
+}

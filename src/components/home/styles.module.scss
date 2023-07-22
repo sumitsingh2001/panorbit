@@ -1,0 +1,85 @@
+.container{
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('https://media.istockphoto.com/id/165974199/vector/an-abstract-light-blue-and-white-wavy-background.jpg?s=612x612&w=0&k=20&c=zeL0WnXtKkNISFBvmWBut1zfr5cAc0udZMh83FynIvU=') no-repeat center center ;
+  background-size: cover;
+
+  .home{
+    .users{
+      width: 550px;
+      max-width: 550px;
+      height: 500px;
+
+      overflow-y: scroll;
+
+      background-color: rgb(241, 239, 239);
+      border-radius: 16px;
+
+      .title{
+        font-size: 24px;
+        font-weight: 500;
+        font-family:Arial, Helvetica, sans-serif;
+        letter-spacing: 1px;
+
+        color: #8b8a8a;
+        text-align: center;
+        padding: 28px 0;
+
+        position: sticky;
+        top: 0;
+        background-color: rgb(241, 239, 239);
+        z-index: 100;
+
+      }
+      .listedUsers{
+        background-color: #fff;
+        padding: 24px 14px;
+
+        .allUsers{
+          border-bottom: 1px solid #ccc;
+          margin-bottom: 8px;
+          padding-bottom: 4px;
+
+          cursor: pointer;
+
+          .userlink{
+            text-decoration: none;
+            color: #000;
+
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 20px;
+
+            &:hover .userName{
+              opacity: 0.9;
+            }
+
+            .profileImg{
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              overflow: hidden;
+
+              img{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+              }
+            }
+            .userName{
+              font-size: 18px;
+              font-weight: 500;
+              opacity: 0.6;
+
+            }
+          }
+        }
+      }
+    }
+  }
+}
